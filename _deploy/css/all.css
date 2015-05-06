@@ -678,16 +678,16 @@ ul.tags li:last-child::after {
     transition: transform 500ms ease;
   }
   .project .thumbnail {
-    margin-left: 8.46154%;
-    margin-right: 8.46154%;
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
     width: 49.23077%;
     float: right;
     margin-right: 0;
+    margin-left: 8.46154%;
+    margin-right: 8.46154%;
     min-height: 400px;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
   }
   .project:hover .content {
     -moz-transform: translate(1em);
