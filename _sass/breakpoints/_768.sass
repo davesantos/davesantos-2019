@@ -16,7 +16,7 @@ h2
 // Structure
 //================================
 .header
-  height: rhythm(4)
+  height: rhythm(5)
   padding-bottom: rhythm(2)
 
 .nav
@@ -55,11 +55,9 @@ h2
   overflow: hidden
 
 .project
-  // height: rhythm(14)
   .inner
     +display-flex
     +align-items(center)
-
   h2
     text-align: left
   .content
@@ -68,6 +66,9 @@ h2
   .thumbnail
     +squish(1,1)
     +span(last 6)
+    min-height: 400px
+    +display-flex
+    +align-items(center)
   &:hover
     .content
       +transform(translate(1em))

@@ -608,7 +608,7 @@ ul.tags li:last-child::after {
   }
 
   .header {
-    height: 6rem;
+    height: 7.5rem;
     padding-bottom: 3rem;
   }
 
@@ -683,6 +683,11 @@ ul.tags li:last-child::after {
     width: 49.23077%;
     float: right;
     margin-right: 0;
+    min-height: 400px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
   }
   .project:hover .content {
     -moz-transform: translate(1em);

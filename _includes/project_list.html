@@ -19,7 +19,9 @@
 
 
       </div>
-      <a class="thumbnail" href="{% if project.slug == null %}{{ project.title | slugify | prepend:'/work/' }}{% else %}{{ project.slug | lowercase | prepend:'/work/' }} {% endif %}"><img data-src="{{ project.thumbnail }}" height="405px" alt=""></a>
+      <div class="thumbnail">
+        <a href="{% if project.slug == null %}{{ project.title | slugify | prepend:'/work/' }}{% else %}{{ project.slug | lowercase | prepend:'/work/' }} {% endif %}"><img data-src="{{ project.thumbnail }}" height="405px" alt=""></a>
+      </div>
     </div>
   </article>
   {% endfor %}
