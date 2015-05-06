@@ -1,6 +1,5 @@
 *.log
 .DS_Store
 .sass-cache
-assets
 bower_components
 node_modules
