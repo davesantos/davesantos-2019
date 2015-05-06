@@ -209,10 +209,13 @@ body {
 a {
   text-decoration: none;
   color: #fff;
-  -moz-transition: all 500ms ease;
-  -o-transition: all 500ms ease;
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
+  -moz-transition: color 500ms ease;
+  -o-transition: color 500ms ease;
+  -webkit-transition: color 500ms ease;
+  transition: color 500ms ease;
+}
+a:hover {
+  color: #ffc0cb;
 }
 
 img {
@@ -224,9 +227,6 @@ h1 {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
-}
-h1 a:hover {
-  color: #ffc0cb;
 }
 
 h2, h3, h4 {
@@ -309,9 +309,6 @@ ul.social li {
 }
 ul.social li:last-child {
   margin-right: none;
-}
-ul.social li a:hover {
-  color: #ffc0cb;
 }
 
 .header, .inner {
@@ -409,7 +406,7 @@ ul.tags li:last-child::after {
   transition: border-color 500ms ease;
 }
 .single a:hover {
-  border-color: white;
+  border-color: #ffc0cb;
 }
 .single img {
   display: block;

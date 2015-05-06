@@ -30,7 +30,9 @@ body
 a
   text-decoration: none
   color: $base-font-color
-  +single-transition(all)
+  +single-transition(color)
+  &:hover
+    color: $color-accent
 
 img
   max-width: 100%
@@ -40,8 +42,6 @@ h1
   font-family: inherit
   font-size: inherit
   font-weight: inherit
-  a:hover
-    color: $color-accent
 
 h2, h3, h4
   font-family: "Gza Seminegra", Times New Roman, serif
@@ -99,8 +99,6 @@ ul.social
     &:last-child
       margin-right: none
     a
-      &:hover
-        color: $color-accent
 
 %inner
   +container
@@ -176,7 +174,7 @@ ul.tags
     border-bottom: 2px solid rgba(255, 255, 255, 0.10)
     +single-transition(border-color)
     &:hover
-      border-color: rgba(255, 255, 255, 1)
+      border-color: $color-accent
   img
     display: block
     margin: rhythm(1) auto
