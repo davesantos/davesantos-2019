@@ -13,4 +13,4 @@ images:
   - /assets/ej_5.jpg
 year: 2013
 ---
-Experimental Jelly is a 2013 LP release of [Tomorrows Tulips](http://experimentaljelly.com) recorded in San Francisco. One thousand copies were pressed and distributed by [Burger Records](http://www.burgerrecords.org/). I designed the entire package.
+Experimental Jelly is the 2013 LP release of [Tomorrows Tulips](http://experimentaljelly.com) recorded in San Francisco. One thousand copies were pressed and distributed by [Burger Records](http://www.burgerrecords.org/). I designed the entire package.

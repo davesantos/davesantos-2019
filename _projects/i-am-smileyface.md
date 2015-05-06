@@ -10,4 +10,4 @@ images:
   - /assets/iam_logo.svg
 year: 2011
 ---
-I AM :) was a dyed tote bag project by Kayla Bearg and Dominic Santos. Limited batch were exhibited at the [Southern Exposure](https://www.soex.org/) artist sale and sold at [General Store](http://shop-generalstore.com/) San Francisco. I was responsible for designing a logo to be screen printed on the bags.
+I AM :) was a dyed tote bag project by Kayla Bearg and Dominic Santos. A limited batch was exhibited at the [Southern Exposure](https://www.soex.org/) artist sale and sold at [General Store](http://shop-generalstore.com/) San Francisco. I was responsible for designing a logo to be screen printed on the bags.
