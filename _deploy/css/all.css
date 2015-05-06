@@ -738,5 +738,6 @@ ul.tags li:last-child::after {
     width: 32.30769%;
     float: left;
     margin-right: 1.53846%;
+    margin-top: 1.5rem;
   }
 }

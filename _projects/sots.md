@@ -1,7 +1,7 @@
 ---
 title: Sun on the Sand
 slug: sots
-description: Sun on the Sand (2009 – 2013) was a wealth. Montreal and New York. I design user interface for a heavier emphasis on readability. Furthermore my role was to managed and scale the growing database.
+description: A music blog from active from 2009 – 2013 where I designed the user interface, managed and scaled the growing database.
 tags:
   - Website
 thumbnail: /assets/sots_4.png
