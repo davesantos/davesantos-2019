@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+  <div class="loader"></div>
+  {% include header.html %}
+  <main id="content" class="m-scene">
+    <div class="single scene_element scene_element--fadein inner">
+      <section class="top">
+        <div class="title">
+          <h2>{{ page.title }}</h2>
+          {% assign tags = page.tags %}
+          {% if tags %}
+          <ul class="tags">
+          {% for tag in tags %}
+          {{ tag | capitalize | prepend:'<li class="tag">' | append:'</li>'}}
+          {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+        <div class="content">
+        {{ content }}
+        </div>
+      </section>
+      <div class="slider">
+        {% assign images = page.images %}
+        {% for image in images %}
+        <img data-src="{{ image }}">
+        {% endfor %}
+      </div>
+
+    </div>
+    {% include meta.html %}
+  </main>
+  {% include footer.html %}
+</body>
+</html>

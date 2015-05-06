@@ -1,0 +1,26 @@
+<section class="projects-wrap">
+  {% assign projects = site.projects | sort:"weight" %}
+  {% for project in projects %}
+  <article class="project">
+    <div class="inner">
+      <div class="content">
+        <a href="{% if project.slug == null %}{{ project.title | slugify | prepend:'/work/' }}{% else %}{{ project.slug | lowercase | prepend:'/work/' }} {% endif %}">
+        <h2>{{ project.title }}</h2>
+        {% assign tags = project.tags %}
+        {% if tags %}
+        <ul class="tags">
+        {% for tag in tags %}
+        {{ tag | capitalize | prepend:'<li class="tag">' | append:'</li>'}}
+        {% endfor %}
+        </ul>
+        {% endif %}
+        {% if project.description %}<p>{{ project.description }}</p>{% endif %}
+        </a>
+
+
+      </div>
+      <a class="thumbnail" href="{% if project.slug == null %}{{ project.title | slugify | prepend:'/work/' }}{% else %}{{ project.slug | lowercase | prepend:'/work/' }} {% endif %}"><img data-src="{{ project.thumbnail }}" height="405px" alt=""></a>
+    </div>
+  </article>
+  {% endfor %}
+</section>

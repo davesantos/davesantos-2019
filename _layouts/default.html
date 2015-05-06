@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+  <div class="loader"></div>
+  {% include header.html %}
+  <main id="content" class="m-scene">
+    <div class="scene_element scene_element--fadein">
+    {{ content }}
+    </div>
+  </main>
+  {% include footer.html %}
+</body>
+</html>

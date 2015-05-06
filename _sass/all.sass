@@ -1,0 +1,253 @@
+@import base
+
++font-face("Maria Pro", font-files("maria-webfont-webfont.eot", "maria-webfont-webfont.svg", "maria-webfont-webfont.ttf", "maria-webfont-webfont.woff"))
+
+$base-font-size: 20px
+$base-line-height: 30px
+$rhythm-unit: rem
++establish-baseline
+
+$base-background-color: #0c0b08
+$base-font-color: #fff
+
+$color-accent: #ffc0cb
+
+// $default-transition-delay    : false
+$default-transition-duration : 500ms
+$default-transition-function : ease
+// $default-transition-property : all
+
+*
+  +box-sizing(flex-box)
+
+body
+  -webkit-font-smoothing: antialiased
+  background: $base-background-color
+  color: $base-font-color
+  font-family: "Maria Pro", sans-serif
+  letter-spacing: 0.02em
+
+a
+  text-decoration: none
+  color: $base-font-color
+  +single-transition(all)
+
+img
+  max-width: 100%
+  height: auto
+
+h1
+  font-family: inherit
+  font-size: inherit
+  font-weight: inherit
+  a:hover
+    color: $color-accent
+
+h2, h3, h4
+  font-family: "Gza Seminegra", Times New Roman, serif
+  font-size-adjust: 0.67
+  font-style: normal
+  font-weight: 600
+
+
+//==============================
+// Structure
+//==============================
+.header
+  @extend %inner
+  text-align: center
+  height: inherit
+
+.loader
+  +single-transition(opacity)
+  +animation(barberpole 3s linear infinite)
+  opacity: 0
+  z-index: 9999
+  height: 5px
+  width: 100%
+  background: white
+  top: 0
+  position: fixed
+  background-size: 10px 10px
+  background-image: linear-gradient(-45deg, rgba(black, 0.5) 25%, transparent 25%, transparent 50%, rgba(black, 0.5) 50%, rgba(black, 0.5) 75%, transparent 75%, transparent)
+  &.loading
+    opacity: 1
+
++keyframes(barberpole)
+  from
+    background-position: 0 0
+  to
+    background-position: 60px 30px
+
+.nav
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    li
+      display: inline-block
+      margin-right: 1em
+
+ul.social
+  text-align: center
+  list-style: none
+  margin: 0 0 rhythm(1) 0
+  padding: 0
+  li
+    display: inline-block
+    margin-right: 0.5em
+    &:last-child
+      margin-right: none
+    a
+      &:hover
+        color: $color-accent
+
+%inner
+  +container
+  padding-left: gutter()
+  padding-right: gutter()
+
+.inner
+  @extend %inner
+
+
+.footer
+  padding: rhythm(1) gutter()
+  min-height: rhythm(1)
+  text-align: center
+
+
+//==============================
+// Projects
+//==============================
+
+.projects-wrap
+  overflow: hidden
+
+.project
+  +single-transition(background)
+  overflow: hidden
+  padding: rhythm(1) 0
+  &:hover
+    background: lighten($base-background-color, 5%)
+  h2
+    margin: 0
+    text-align: center
+  .content
+    a
+      +single-transition(color)
+    a:hover
+      color: $color-accent
+
+ul.tags
+  list-style: none
+  margin: 0
+  padding: 0
+  text-align: center
+  li
+    display: inline-block
+    &::after
+      content: "/"
+      margin: 0 0.5em
+      color: $color-accent
+    &:last-child::after
+      content: none
+
+.tag, h3
+  font-family: "Gza Seminegra", Times New Roman, serif
+  font-size-adjust: 0.67
+  font-style: normal
+  font-weight: 600
+  text-transform: uppercase
+  +adjust-font-size-to(14px)
+  letter-spacing: 0.08em
+
+//================================
+// Single
+//================================
+
+.single
+  .title
+    text-align: center
+    margin-bottom: rhythm(1)
+    h2
+      margin-bottom: 0
+  a
+    border-bottom: 2px solid rgba(255, 255, 255, 0.10)
+    +single-transition(border-color)
+    &:hover
+      border-color: rgba(255, 255, 255, 1)
+  img
+    display: block
+    margin: rhythm(1) auto
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+    &.lazy-loaded
+      background: #888
+
+
+
+//==============================
+// Animation
+//==============================
+.lazy-hidden
+  +opacity(0)
+
+.lazy-loaded
+  +single-transition(opacity)
+  +opacity(1)
+
+.m-scene .scene_element
+  +animation-duration(0.5s)
+  +animation-timing-function(ease)
+  +animation-fill-mode(both)
+
+.m-scene .scene_element--fadein
+  +animation-name(fadeIn)
+
+.m-scene .scene_element--slidein
+  +animation-name(slideInDown)
+
+.m-scene .scene_element--slideout
+  +animation-name(slideOutUp)
+
+.m-scene.is-exiting .scene_element
+  +animation-direction(alternate-reverse)
+
++keyframes(fadeIn)
+  0%
+    +opacity(0)
+  100%
+    +opaque
+
++keyframes(slideInDown)
+  0%
+    +translateY(-100%)
+    visibility: visible
+  100%
+    +translateY(0)
+
++keyframes(slideOutUp)
+  0%
+    +translateY(0)
+  100%
+    visibility: hidden
+    +translateY(-100%)
+
+.slideInDown
+  -webkit-animation-name: slideInDown
+  animation-name: slideInDown
+
+.fadeIn
+  -webkit-animation-name: fadeIn
+  animation-name: fadeIn
+
+@media only screen and (min-width: 768px)
+  @import breakpoints/768
+
+@media only screen and (min-width: 1030px)
+
+@media only screen and (min-width: 1240px)
+

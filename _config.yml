@@ -1,0 +1,40 @@
+# Site settings
+title: Dave Santos
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+
+#Site Owner
+email: your-email@domain.com
+twitter_username: davesantos
+github_username:  davesantos
+
+# Jekyll Configurations
+permalink: journal/:year/:title
+markdown: kramdown
+sass:
+  sass_dir: _sass
+  style: compressed
+include: [".htaccess"]
+exclude: ["bower_components", "node_modules", "config.rb", "gulpfile.js", "package.json","*.sublime-project", "*.sublime-workspace", "*.log", "breakpoints", "LICENSE", "README.md"]
+# source: app
+destination: _deploy
+
+collections:
+    projects:
+        output: true
+        permalink: /work/:path/
+
+defaults:
+  -
+    scope:
+      path: "work"
+      type: "projects"
+    values:
+      title: "Dave Santos"
+      layout: "project" # overrides previous default layout
+      thumbnail: "http://placehold.it/1080x810"
+      weight: 999

@@ -1,0 +1,104 @@
+body
+  +adjust-font-size-to(22px)
+
+h1
+  +span(8)
+  margin-top: 0
+  margin-bottom: 0
+  text-align: left
+  padding: rhythm(1) 0
+
+h2
+  +adjust-font-size-to(42px)
+  +adjust-leading-to(1.5)
+
+//================================
+// Structure
+//================================
+.header
+  height: rhythm(4)
+  padding-bottom: rhythm(2)
+
+.nav
+  +span(4 last)
+  top: auto
+  height: auto
+  font-family: inherit
+  font-size: inherit
+  padding: 0
+  position: relative
+  text-align: right
+  ul
+    margin: 0
+    li
+      text-align: left
+      display: inline-block
+      margin-right: $gutter-width
+      &:last-child
+        margin-right: 0
+      a
+        +single-transition(border-color)
+        +leading-border(5px, 1)
+        border-bottom: none
+        border-color: transparent
+        display: block
+        padding-bottom: rhythm(1)
+        padding-top: rhythm(1)
+        &:hover, &.active
+          border-color: $base-font-color
+
+//================================
+// Projects
+//================================
+
+.projects-wrap
+  overflow: hidden
+
+.project
+  // height: rhythm(14)
+  .inner
+    +display-flex
+    +align-items(center)
+
+  h2
+    text-align: left
+  .content
+    +span(4)
+    +single-transition(transform)
+  .thumbnail
+    +squish(1,1)
+    +span(last 6)
+  &:hover
+    .content
+      +transform(translate(1em))
+      h2, p, li
+        font-color: $base-font-color
+  ul.tags
+    text-align: left
+//================================
+// Single
+//================================
+
+.slider
+  +squish(1, 1)
+  margin-bottom: rhythm(2)
+
+
+.single
+  .title
+    +span(5)
+    +pre(1)
+  .content
+    +post(1)
+    +span(5)
+
+.top
+  overflow: hidden
+  margin-bottom: rhythm(2)
+
+.bio
+  +pre(1)
+  +span(5)
+  +post(1)
+.avatar
+  +span(4)
